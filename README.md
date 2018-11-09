@@ -1,2 +1,2 @@
 # js-cheatsheet
-my own codebase and patterns on J
+my own codebase and patterns on JS
