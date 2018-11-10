@@ -1,0 +1,52 @@
+// функции и функциональные выражения
+
+// в чем разница между функциями и ф-циональными выражениями?
+// а в чем особенности стрелочных функций?
+
+
+=========
+
+function count() {
+  // переменные i,j не будут уничтожены по окончании цикла
+  for (var i = 0; i < 3; i++) {
+    var j = i * 2;
+  }
+
+  alert( i ); // i=3, последнее значение i, при нём цикл перестал работать
+  alert( j ); // j=4, последнее значение j, которое вычислил цикл
+}
+
+подробнее: https://learn.javascript.ru/closures
+
+а еще умные слова по теме: 
+LexicalEnvironment
+
+
+
+var phrase = 'Привет';
+
+function sayHi(name) {
+  alert(phrase + ', ' + name);
+}
+
+sayHi('Вася');  // Привет, Вася (*)
+phrase = 'Пока';
+sayHi('Вася'); // Пока, Вася (**) 
+
+// это все из-за [[Scope]]
+
+https://learn.javascript.ru/function-basics
+
+
+
+Возврат функции? Что это для чего?
+
+function makeCounter() {
+  var currentCount = 1;
+
+  return function() { // (**)
+    return currentCount++;
+  };
+}
+
+markup: https://learn.javascript.ru/closures#vozvrat-funktsii

@@ -1,0 +1,18 @@
+
+
+typeof [] // "object"
+typeof null // "object"  (1)
+typeof null == "object" // true
+
+На самом деле null – это не объект, а отдельный тип данных.
+
+https://learn.javascript.ru/types-intro
+
+
+преобразование типов (штуки, которые убили мой мозг):
+
+"  -9\n" + 5 // "  -9\n5"
+"  -9\n" - 5 // -14
+5 && 2 // 2
+2 && 5 // 5
+
