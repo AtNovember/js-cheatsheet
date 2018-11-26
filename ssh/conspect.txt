@@ -1,0 +1,3 @@
+symmetrical encryption (key exchange algorythm)
+asymmetrical encryption (deffie hellman key excahnge algorythm)
+hashing ()
