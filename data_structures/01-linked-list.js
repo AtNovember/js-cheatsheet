@@ -27,6 +27,13 @@ class LinkedList {
 
   // добавление в голову списка:
   // addToHead(value)
+  addToHead(value) {
+    const newNode = { value };
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+    return this;
+  }
 }
 
 const l = new LinkedList(3);
