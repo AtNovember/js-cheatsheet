@@ -34,6 +34,54 @@ class LinkedList {
     this.length++;
     return this;
   }
+
+  // удаление из головы списка
+  removeFromHead() {
+    if (this.length === 0) return undefined;
+
+    const value = this.head.value;
+    this.head = this.head.next;
+    this.length--;
+
+    return value;
+  }
+
+  // поиск значения
+  find(value) {
+    let findNode = this.head;
+
+    while(thisNode) {
+      if (thisNode.value === value) {
+        return thisNode;
+      }
+      thisMode = thisNode.next;
+    }
+    return thisNode;
+  }
+
+  // удаление значения
+  remove(value) {
+    if (this.length === 0) return undefined;
+    if (this.head.value === value) {
+      this.removeFromHead();
+      return this;
+    }
+
+    let previousNode = this.head;
+    let thisMode = previousNode.next;
+
+    while(thisNode) {
+      if (thisNode.value === value) break;
+      previousNode = this.thisNode;
+      thisNode = thisNode.next;
+    }
+
+    if (thisNode === null) return undefined;
+
+    previousNode.next = thisNode.next;
+    this.length--;
+    return this;
+  }
 }
 
 const l = new LinkedList(3);
