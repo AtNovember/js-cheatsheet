@@ -30,7 +30,7 @@ class Tree {
         } else {
           console.log('search in children', node.children);
           if (node.children.length !== 0) { 
-            this.deepSearch(node.children, nodeId);
+            this.deepSearch(nodeId, node.children);
           }
         }
       });
