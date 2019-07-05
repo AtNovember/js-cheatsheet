@@ -17,16 +17,11 @@ function showFile(blob) {
   // Create a link pointing to the ObjectURL containing the blob.
   const data = window.URL.createObjectURL(newBlob);
 
-  // var fileURL = window.URL.createObjectURL(data);
-  // window.open(fileURL);
-
   var link = document.createElement('a');
   link.href = data;
   link.download = "file.pdf";
   link.click();
-  // window.URL.revokeObjectURL(data);
   setTimeout(function () {
-    console.log('qweqwe', data);
     // For Firefox it is necessary to delay revoking the ObjectURL
     window.URL.revokeObjectURL(data);
     window.open(window.URL.revokeObjectURL(data));
