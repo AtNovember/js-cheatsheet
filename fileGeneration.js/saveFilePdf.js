@@ -1,7 +1,14 @@
 
 const blob = 'server respose with file';
+// TODO: request which you sent to server before to get fileStream data 
+// TODO: MUST HAVE This config { responseType: 'arraybuffer' }
 
 function showFile(blob) {
+
+  // define filename and contnt-type
+  const filename = blob.headers["content-disposition"].split("filename=")[1];
+  const type = blob.headers['content-type'];
+
   // It is necessary to create a new blob object with mime-type explicitly set
   // otherwise only Chrome works like it should
   var newBlob = new Blob([blob], { type: "application/pdf" })
